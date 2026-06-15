@@ -1,0 +1,6 @@
+1. gives wrong hints for guesses
+ 1a. hints were reversed. when guess was too high, the message said go higher. same thing with low guesses
+2. does not start a new game correctly
+- does not check if guess is out of range in the "easy" category
+- does not account for correct category (ie category selection does not matter)
+- range and attempts in the side panel and main panel do not match
