@@ -52,9 +52,16 @@ I tested if the bug was fixed by testing it with the original input I tested bef
 
 ---
 
+Session state saves storage across different script reruns. Streamlit reruns forces the UI to reflect changes in session state without requiring a manual user interaction. 
+
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
+I want to use AI more intentionally! Instead of a constant feedback loop with AI, being more intentional with my responses can really save time and learning. 
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+I would be more thorough with previewing my task at hand. Perhaps utilizing AI to break down what I have to work with before diving in with changes.
+
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+It's not always perfect and requires a human pair of eyes to correct it! 
