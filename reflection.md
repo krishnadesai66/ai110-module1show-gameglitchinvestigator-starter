@@ -43,6 +43,7 @@ I used Claude Extension in VS Code. A suggestion it made was to set the count of
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
+I tested if the bug was fixed by testing it with the original input I tested before the fix and then using different input. I tested the corrected hints but using multiple inputs and seeing if I was able to inch closer to the correct answer (which I was able to do). I also had tested off nominal test cases to ensure that the hints were letting me know I was guessing the wrong number. 
 ---
 
 ## 4. What did you learn about Streamlit and state?

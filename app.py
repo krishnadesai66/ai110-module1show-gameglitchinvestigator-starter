@@ -37,6 +37,7 @@ if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
 if "attempts" not in st.session_state:
+    # #FIX: Start attempts at 0 to correct off-by-one in attempts left
     st.session_state.attempts = 0
 
 if "score" not in st.session_state:
@@ -57,10 +58,12 @@ if "celebrate" not in st.session_state:
 st.subheader("Make a guess")
 
 st.info(
+    # #FIX: Use actual low/high range so main panel matches sidebar
     f"Guess a number between {low} and {high}. "
     f"Attempts left: {attempt_limit - st.session_state.attempts}"
 )
 
+# #FIX: Queue feedback in session_state so messages persist across reruns
 for kind, text in st.session_state.feedback:
     getattr(st, kind)(text)
 st.session_state.feedback = []
@@ -90,6 +93,7 @@ with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
 if new_game:
+    # #FIX: Reset all state and draw secret from difficulty range on new game
     st.session_state.attempts = 0
     st.session_state.secret = random.randint(low, high)
     st.session_state.score = 0
@@ -116,6 +120,7 @@ if submit:
     else:
         st.session_state.history.append(guess_int)
 
+        # #FIX: Compare against integer secret to remove string-cast glitch
         outcome, message = check_guess(guess_int, st.session_state.secret)
 
         if show_hint:
